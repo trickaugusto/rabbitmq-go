@@ -26,8 +26,7 @@ func main() {
 	err = channel.Publish("", queue.Name, false, false, amqp.Publishing{
 		ContentType: "text/plain",
 		Body:        []byte("Hello World"),
-	},
-	)
+	})
 
 	if err != nil {
 		panic(err)
